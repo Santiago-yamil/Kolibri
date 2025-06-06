@@ -1,0 +1,274 @@
+{
+  "saludos": [
+    {
+      "es": "Buenos días",
+      "imagen": "buenosdias",
+      "traduccion": "Yatlahkah",
+      "descripcion": "En la cultura náhuatl, el saludo al amanecer se relaciona con Tonatiuh, el dios del sol, símbolo de renovación diaria.",
+      "audio": "buenosdias"
+    },
+    {
+      "es": "Buenas tardes",
+      "imagen": "buenastardes",
+      "traduccion": "Yateotlak",
+      "descripcion": "Los saludos durante el día honraban la dualidad del trabajo y el descanso, esenciales en la vida náhuatl.",
+      "audio": "buenastardes"
+    },
+    {
+      "es": "Buenas noches",
+      "imagen": "buenasnoches",
+      "traduccion": "kuali youaltin",
+      "descripcion": "La noche era un momento sagrado ligado a los sueños y a Tezcatlipoca, dios de la oscuridad y el destino.",
+      "audio": "buenasnoches"
+    },
+    {
+      "es": "Mi nombre es",
+      "imagen": "minombrees",
+      "traduccion": "Notōcā",
+      "descripcion": "El nombre en náhuatl tenía significado espiritual y a menudo reflejaba características personales o del entorno.",
+      "audio": "minombrees"
+    },
+    {
+      "es": "¿Como estas?",
+      "imagen": "comoestas",
+      "traduccion": "Tlen tichika?",
+      "descripcion": "Preguntar por el bienestar ajeno reflejaba el valor comunitario y la importancia de la armonía social.",
+      "audio": "comoestas"
+    },
+    {
+      "es": "Hasta mañana ",
+      "imagen": "hastamanana",
+      "traduccion": "Mostla",
+      "descripcion": "Decir 'Mostla' implicaba la esperanza de la continuidad y la conexión entre los ciclos de la vida.",
+      "audio": "hastamanana"
+    }
+  ],
+  "animales": [
+    {
+      "es": "Perro",
+      "imagen": "perro",
+      "traduccion": "Itzcuintli",
+      "descripcion": "El itzcuintli era considerado un guía espiritual que ayudaba a las almas a cruzar hacia el Mictlán, el inframundo náhuatl.",
+      "audio": "audio_animales_1.mp3"
+    },
+    {
+      "es": "Coyote",
+      "imagen": "coyote",
+      "traduccion": "Coyotl",
+      "descripcion": "El coyotl simbolizaba la astucia y era visto como un ser que podía moverse entre el mundo físico y espiritual.",
+      "audio": "audio_animales_2.mp3"
+    },
+    {
+      "es": "Jaguar",
+      "imagen": "jaguar",
+      "traduccion": "Ocelotl",
+      "descripcion": "El ocelotl representaba la fuerza y el poder guerrero; era el animal sagrado de los guerreros de élite.",
+      "audio": "audio_animales_1.mp3"
+    },
+    {
+      "es": "Águila",
+      "imagen": "aguila",
+      "traduccion": "Cuāuhtli",
+      "descripcion": "El cuāuhtli era símbolo del sol y la visión; los mexicas creían que representaba la nobleza y el valor.",
+      "audio": "audio_animales_2.mp3"
+    },
+    {
+      "es": "Serpiente",
+      "imagen": "serpiente",
+      "traduccion": "Coatl",
+      "descripcion": "La serpiente era sagrada y representaba la energía de la tierra, vinculada a Quetzalcóatl, el dios civilizador.",
+      "audio": "audio_animales_1.mp3"
+    },
+    {
+      "es": "Venado",
+      "imagen": "venado",
+      "traduccion": "Mazatl",
+      "descripcion": "El mazatl era símbolo de agilidad y conexión con la naturaleza; también se relacionaba con calendarios rituales.",
+      "audio": "audio_animales_2.mp3"
+    }
+  ]
+,
+  "numeros": [
+    {
+      "es": "uno",
+      "imagen": "uno",
+      "traduccion": "Se",
+      "descripcion": "En la numeración náhuatl, 'Se' es el inicio del conteo ritual usado en calendarios y ceremonias.",
+      "audio": "uno"
+    },
+    {
+      "es": "cinco",
+      "imagen": "cinco",
+      "traduccion": "Makuilli",
+      "descripcion": "Makuilli era un número clave en ciclos agrícolas y rituales, representando equilibrio y movimiento.",
+      "audio": "cinco"
+    },
+    {
+      "es": "siete",
+      "imagen": "siete",
+      "traduccion": "Chikome",
+      "descripcion": "Chikome estaba asociado con la diosa del maíz y la fertilidad, importante en festividades agrícolas.",
+      "audio": "siete"
+    },
+    {
+      "es": "diez",
+      "imagen": "diez",
+      "traduccion": "Mahtlaktli",
+      "descripcion": "Mahtlaktli simbolizaba totalidad y cumplimiento en la numerología ritual de los pueblos nahuas.",
+      "audio": "diez"
+    },
+    {
+      "es": "quince",
+      "imagen": "quince",
+      "traduccion": "Kaxtolli",
+      "descripcion": "Kaxtolli es parte de los ciclos numéricos prehispánicos que se repetían en los calendarios sagrados.",
+      "audio": "quince"
+    },
+    {
+      "es": "veinte",
+      "imagen": "veinte",
+      "traduccion": "Sempoalli",
+      "descripcion": "Sempoalli era la base del sistema vigesimal náhuatl, usado en matemáticas y astronomía.",
+      "audio": "veinte"
+    }
+  ]
+,
+  "alfabeto": [
+    {
+      "es": "Ch",
+      "imagen": "ch",
+      "traduccion": "chi",
+      "descripcion": "La combinación 'Ch' representa un sonido común en náhuatl, como en 'Chīchīltik' (rojo).",
+      "audio": "ch"
+    },
+    {
+      "es": "K",
+      "imagen": "k",
+      "traduccion": "ci",
+      "descripcion": "La letra 'K' se usa para representar el sonido fuerte de la 'C' dura en la escritura moderna del náhuatl.",
+      "audio": "k"
+    },
+    {
+      "es": "P",
+      "imagen": "p",
+      "traduccion": "Bi",
+      "descripcion": "El sonido 'P' es fundamental en muchas palabras náhuatl como 'Piltontli' (niño o niña).",
+      "audio": "p"
+    },
+    {
+      "es": "T",
+      "imagen": "t",
+      "traduccion": "ti",
+      "descripcion": "La letra 'T' se encuentra frecuentemente en náhuatl; aparece al final de muchos sustantivos.",
+      "audio": "t"
+    },
+    {
+      "es": "Y",
+      "imagen": "y",
+      "traduccion": "yi",
+      "descripcion": "El sonido 'Y' aparece en palabras como 'Yollotl' (corazón), que reflejan emociones y conceptos centrales.",
+      "audio": "y"
+    },
+    {
+      "es": "Tl",
+      "imagen": "tl",
+      "traduccion": "Ti",
+      "descripcion": "'Tl' es uno de los sonidos más característicos del náhuatl, presente en nombres como 'Tlāloc' y 'Tlāhuik'.",
+      "audio": "tl"
+    }
+  ]
+,
+  "familia": [
+    {
+      "es": "papa",
+      "imagen": "papa",
+      "traduccion": "tata",
+      "descripcion": "En la cultura náhuatl, el padre era una figura de respeto que enseñaba a los hijos a cultivar, cazar y honrar a los dioses.",
+      "audio": "audio_familia_1.mp3"
+    },
+    {
+      "es": "mama",
+      "imagen": "mama",
+      "traduccion": "Nana",
+      "descripcion": "La madre náhuatl era símbolo de vida y sabiduría, encargada de enseñar valores, curar con hierbas y transmitir la lengua.",
+      "audio": "audio_familia_2.mp3"
+    },
+    {
+      "es": "hermana",
+      "imagen": "hermana",
+      "traduccion": "pipi",
+      "descripcion": "Las hermanas en los pueblos náhuatl colaboraban en las tareas del hogar y preservaban las tradiciones orales y rituales.",
+      "audio": "audio_familia_3.mp3"
+    }
+  ]
+,
+  "comercio": [
+    {
+      "es": "comprar",
+      "imagen": "comprar",
+      "traduccion": "tlakoualistli, ekauili",
+      "descripcion": "En el mundo náhuatl, comprar implicaba intercambiar productos en mercados como el de Tlatelolco, uno de los más grandes de Mesoamérica.",
+      "audio": "compra"
+    },
+    {
+      "es": "vender",
+      "imagen": "vender",
+      "traduccion": "namaka",
+      "descripcion": "Los nahuas eran hábiles comerciantes; vender era una forma de mantener el equilibrio entre comunidades a través del trueque.",
+      "audio": "vender"
+    },
+    {
+      "es": "dinero",
+      "imagen": "dinero",
+      "traduccion": "tomin",
+      "descripcion": "En lugar de monedas, los nahuas usaban granos de cacao y mantas como formas de dinero aceptadas en los tianguis.",
+      "audio": "dinero"
+    },
+    {
+      "es": "mercancia",
+      "imagen": "mercancia",
+      "traduccion": "tlanemak, tiankistiloni",
+      "descripcion": "Las mercancías náhuatl incluían alimentos, cerámica, textiles y obsidiana, que se transportaban a pie o en canoas.",
+      "audio": "mercancia"
+    },
+    {
+      "es": "comerciante",
+      "imagen": "comerciante",
+      "traduccion": "pochtekatl, tlasemananki",
+      "descripcion": "Los pochtecas eran comerciantes nahuas de alto rango que también fungían como espías y emisarios entre ciudades.",
+      "audio": "comerciante"
+    },
+    {
+      "es": "mercado",
+      "imagen": "mercado",
+      "traduccion": "tiankistli",
+      "descripcion": "El tianguis era el centro del comercio nahua, donde se practicaba el trueque y se reunían miles de personas diariamente.",
+      "audio": "mercado"
+    }
+  ]
+,
+  "colores": [
+    {
+      "es": "Negro",
+      "imagen": "negro",
+      "traduccion": "Tliliwik / Tliltik",
+      "descripcion": "El negro simboliza la tierra fértil y la oscuridad del inframundo, lugar de descanso de los ancestros según la cosmovisión náhuatl.",
+      "audio": "audio_costumbres_1.mp3"
+    },
+    {
+      "es": "Rojo",
+      "imagen": "rojo",
+      "traduccion": "Chichiltik",
+      "descripcion": "El rojo representa la sangre, la vida y la fuerza; era usado en rituales y vestimentas de guerreros y sacerdotes.",
+      "audio": "audio_costumbres_2.mp3"
+    },
+    {
+      "es": "Amarillo",
+      "imagen": "amarillo",
+      "traduccion": "Kostik",
+      "descripcion": "El amarillo está asociado al maíz maduro y al sol, elementos centrales en la alimentación y espiritualidad náhuatl.",
+      "audio": "audio_costumbres_3.mp3"
+    }
+  ]
+
+}
