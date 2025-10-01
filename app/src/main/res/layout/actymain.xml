@@ -13,10 +13,16 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:orientation="horizontal"
-        android:gravity="end|center_vertical"
         android:background="@color/orange"
         android:paddingEnd="16dp"
-        android:paddingStart="16dp">
+        android:paddingStart="16dp"
+        android:gravity="center_vertical">
+
+        <!-- Espaciador -->
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0" />
 
         <ImageButton
             android:id="@+id/iconoSuperiorDerecha"
@@ -25,9 +31,9 @@
             android:src="@drawable/book"
             android:contentDescription="Icono adicional"
             android:padding="6dp"
-            android:background="@drawable/fondeo_redondeado_dos"
-            />
+            android:background="@drawable/fondeo_redondeado_dos"/>
     </LinearLayout>
+
 
     <!-- Contenido principal -->
     <LinearLayout
