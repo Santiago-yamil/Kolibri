@@ -42,36 +42,53 @@ class MainActivity : ComponentActivity() {
         val botonHablar = findViewById<Button>(R.id.botonGrabar)
         val spinnerIdiomaOrigen = findViewById<Spinner>(R.id.spinnerIdiomaOrigen)
         val spinnerIdiomaDestino = findViewById<Spinner>(R.id.spinnerIdiomaDestino)
+        val input = findViewById<EditText>(R.id.input)
+        val boton = findViewById<Button>(R.id.boton)
 
 
+        //traducir con el boton
+        boton.setOnClickListener {
+            val textoIngresado = input.text.toString().trim()
+            buscarTraduccion(textoIngresado)
+        }
 
-        // Configurar spinners de idiomas
         val idiomas = listOf("Español", "Nahuatl", "Inglés")
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, idiomas)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
-        spinnerIdiomaOrigen.adapter = adapter
-        spinnerIdiomaDestino.adapter = adapter
+// Adapter para origen (con todos)
+        val adapterOrigen = ArrayAdapter(this, android.R.layout.simple_spinner_item, idiomas)
+        adapterOrigen.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinnerIdiomaOrigen.adapter = adapterOrigen
 
+// Adapter para destino (empieza igual que origen)
+        var adapterDestino = ArrayAdapter(this, android.R.layout.simple_spinner_item, idiomas)
+        adapterDestino.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinnerIdiomaDestino.adapter = adapterDestino
 
+// Listener del spinner origen
         spinnerIdiomaOrigen.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 idiomaOrigenSeleccionado = parent.getItemAtPosition(position).toString()
                 (view as? TextView)?.setTextColor(ContextCompat.getColor(this@MainActivity, android.R.color.black))
+
+                // filtrar lista para destino
+                val listaFiltrada = idiomas.filter { it != idiomaOrigenSeleccionado }
+                adapterDestino = ArrayAdapter(this@MainActivity, android.R.layout.simple_spinner_item, listaFiltrada)
+                adapterDestino.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+                spinnerIdiomaDestino.adapter = adapterDestino
             }
+
             override fun onNothingSelected(parent: AdapterView<*>) {}
         }
 
-
-
-
-        spinnerIdiomaDestino.onItemSelectedListener = object : OnItemSelectedListener {
+        spinnerIdiomaDestino.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 idiomaDestinoSeleccionado = parent.getItemAtPosition(position).toString()
                 (view as? TextView)?.setTextColor(ContextCompat.getColor(this@MainActivity, android.R.color.black))
             }
+
             override fun onNothingSelected(parent: AdapterView<*>) {}
         }
+
 
         // Inicializar base de datos y DAO
         val db = Room.databaseBuilder(
