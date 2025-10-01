@@ -36,6 +36,7 @@
         android:layout_weight="1"
         android:orientation="vertical"
         android:padding="16dp"
+        android:background="@color/gray"
         android:gravity="center_horizontal">
 
         <!-- Spinner idioma origen -->
