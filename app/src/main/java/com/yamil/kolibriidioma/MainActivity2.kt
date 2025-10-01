@@ -25,6 +25,7 @@ import kotlinx.coroutines.withContext
 import java.text.Normalizer
 
 class MainActivity2 : AppCompatActivity() {
+
     private lateinit var fraseDao: FraseDao
     private val SPEECH_REQUEST_CODE = 100
     private lateinit var textViewTraduccion: TextView
@@ -96,7 +97,6 @@ class MainActivity2 : AppCompatActivity() {
         val temp = Normalizer.normalize(this, Normalizer.Form.NFD)
         return Regex("\\p{InCombiningDiacriticalMarks}+").replace(temp, "").lowercase()
     }
-
 
     private fun cargarFrasesIniciales(fraseDao: FraseDao) {
         val frases = listOf(
@@ -195,7 +195,6 @@ class MainActivity2 : AppCompatActivity() {
             }
         }
     }
-
 
     private fun mostrarTraduccion(texto: String) {
         textViewTraduccion.text = texto

@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_animales"
+        android:title="Pagina Principal" />
+    <item
+        android:id="@+id/nav_colores"
+        android:title="Traducciones" />
+    <item
+        android:id="@+id/nav_frutas"
+        android:title=". . ." />
+    <item
+        android:id="@+id/nav_numeros"
+        android:title="Idioma" />
+    <item
+        android:id="@+id/nav_plantas"
+        android:title="TianguisWitzi" />
+    <item
+        android:id="@+id/nav_about"
+        android:title="Acerca de..." />
+</menu>
