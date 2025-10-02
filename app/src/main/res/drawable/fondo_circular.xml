@@ -5,7 +5,6 @@
     <solid android:color="@color/yellow"/>
 
     <stroke
-        android:width="7dp"
+        android:width="10dp"
         android:color="@color/orange" /> <!-- Borde más grueso -->
-
 </shape>

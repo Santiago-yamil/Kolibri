@@ -10,16 +10,13 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import org.json.JSONObject
 
-
 class TercerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tercer)
 
         val categoria = intent.getStringExtra("categoria")
-
-
-
+        
         val iconoSuperiorDerecha = findViewById<ImageButton>(R.id.iconoSuperiorDerecha)
         iconoSuperiorDerecha.setOnClickListener {
             finish() // Cierra la actividad actual

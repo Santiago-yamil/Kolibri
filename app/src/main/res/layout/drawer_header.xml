@@ -2,15 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="160dp"
-    android:gravity="center"
+    android:layout_height="240dp"
     android:background="@color/orange"
     android:padding="16dp">
 
+    <!-- Contenedor horizontal para imagen + texto -->
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:gravity="center_vertical"
+android:layout_marginTop="40dp">
+
+</LinearLayout>
+
     <ImageView
         android:id="@+id/header_icon"
-        android:layout_width="92dp"
-        android:layout_height="84dp"
+        android:layout_width="129dp"
+        android:layout_height="117dp"
+        android:layout_marginEnd="12dp"
         android:contentDescription="@string/app_name"
         android:src="@mipmap/ic_launcher" />
 
@@ -18,10 +28,8 @@
         android:id="@+id/header_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kolibri"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:text="´´Impulsando la equidad, el comercio y el orgullo cultura´´ "
         android:textColor="@android:color/white"
-        android:layout_marginTop="8dp"/>
-
+        android:textSize="18dp"
+        android:textStyle="bold" />
 </LinearLayout>

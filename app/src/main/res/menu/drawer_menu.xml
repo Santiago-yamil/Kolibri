@@ -1,21 +1,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/nav_animales"
+        android:id="@+id/nav_pagPrin"
         android:title="Pagina Principal" />
     <item
-        android:id="@+id/nav_colores"
-        android:title="Traducciones" />
+        android:id="@+id/nav_dicc"
+        android:title="Diccionario" />
     <item
-        android:id="@+id/nav_frutas"
-        android:title=". . ." />
-    <item
-        android:id="@+id/nav_numeros"
+        android:id="@+id/nav_idioma"
         android:title="Idioma" />
     <item
-        android:id="@+id/nav_plantas"
-        android:title="TianguisWitzi" />
+        android:id="@+id/nav_tianguis"
+        android:title="Tianguis Witzi" />
     <item
         android:id="@+id/nav_about"
-        android:title="Acerca de..." />
+        android:title="Acerca de nosotros" />
 </menu>

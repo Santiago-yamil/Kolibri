@@ -24,7 +24,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.text.Normalizer
 
-class MainActivity2 : AppCompatActivity() {
+class MainActivity2 : BaseActivity() {
 
     private lateinit var fraseDao: FraseDao
     private val SPEECH_REQUEST_CODE = 100
@@ -37,6 +37,8 @@ class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.actymain)
+
+        // 🔶 Conectar el botón del header naranja al Drawer
 
         val iconoSuperiorDerecha = findViewById<ImageButton>(R.id.iconoSuperiorDerecha)
         iconoSuperiorDerecha.setOnClickListener {

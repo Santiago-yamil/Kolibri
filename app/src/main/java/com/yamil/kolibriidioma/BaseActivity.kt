@@ -31,9 +31,10 @@ abstract class BaseActivity : AppCompatActivity(),
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.nav_animales -> startActivity(Intent(this, MainActivity::class.java))
-            R.id.nav_colores -> startActivity(Intent(this, SegundoActivity::class.java))
-            R.id.nav_frutas -> startActivity(Intent(this, TercerActivity::class.java))
+            R.id.nav_pagPrin -> startActivity(Intent(this, MainActivity::class.java))
+            R.id.nav_dicc -> startActivity(Intent(this, SegundoActivity::class.java))
+            //R.id.nav_idioma -> startActivity(Intent(this, TercerActivity::class.java))
+            R.id.nav_tianguis -> startActivity(Intent(this, TercerActivity::class.java))
             R.id.nav_about -> {
                 // Aquí puedes abrir una pantalla de "Acerca de"
             }
