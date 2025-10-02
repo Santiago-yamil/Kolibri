@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">witzi</string>
     <string name="uno_text">Escribe aquí...</string>
+    <string name="hola">Hola</string>
 
     <string name="navigation_drawer_open">Abrir menú de navegación</string>
     <string name="navigation_drawer_close">Cerrar menú de navegación</string>

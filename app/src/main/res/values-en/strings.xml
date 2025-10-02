@@ -3,6 +3,7 @@
     <string name="app_name">witzi</string>
     <string name="uno_text">Write here...</string>
 
+    <string name="hola">hello</string>
     <string name="navigation_drawer_open">Open menu navigation</string>
     <string name="navigation_drawer_close">Close menu navigation</string>
 
