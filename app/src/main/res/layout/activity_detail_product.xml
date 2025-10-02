@@ -6,13 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:background="@color/white"
     >
 
     <ImageView
         android:id="@+id/imgProducto"
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        android:scaleType="centerCrop" />
+        android:scaleType="centerCrop"
+        android:layout_marginTop="16dp"/>
 
     <LinearLayout
         android:orientation="horizontal"
@@ -26,14 +28,16 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="&lt;" />
+            android:text="&lt;"
+            android:backgroundTint="@color/toque"/>
 
         <Button
             android:id="@+id/btnNext"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="&gt;" />
+            android:text="&gt;"
+            android:backgroundTint="@color/toque"/>
     </LinearLayout>
 
     <TextView
@@ -42,19 +46,28 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="18sp"
-        android:paddingTop="8dp" />
+        android:paddingTop="8dp"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/tvPrecio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/holo_green_dark"
-        android:textSize="16sp" />
+        android:textColor="@color/rojo_oscuro"
+        android:textSize="24sp"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
 
     <TextView
         android:id="@+id/tvDescripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="8dp" />
+        android:paddingTop="8dp"
+        android:textColor="@color/black"
+        android:background="@color/vibrante_claro"
+        android:padding="18dp"/>
 </LinearLayout>
 
