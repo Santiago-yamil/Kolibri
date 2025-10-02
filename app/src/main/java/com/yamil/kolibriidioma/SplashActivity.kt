@@ -1,4 +1,5 @@
 package com.yamil.kolibriidioma
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -40,17 +41,20 @@ class SplashActivity : AppCompatActivity() {
             .start()
 
 
-        logoPrincipal.animate().withEndAction {
-            logoPrincipal.animate().scaleX(1.05f).scaleY(1.05f).setDuration(120)
-                .withEndAction {
-                    logoPrincipal.animate().scaleX(1f).scaleY(1f).setDuration(120).start()
-                }.start()
-        }
-
         // 4) después de X ms arrancar MainActivity
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, SelectionLanguageActivity::class.java))
-            finish()
+            val sharedPref = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
+            val selectedOption = sharedPref.getString("selected_option", null)
+
+            if (selectedOption == null) {
+                // Primera vez → mostrar pantalla de selección de idioma
+                startActivity(Intent(this, SelectionLanguageActivity::class.java))
+            } else {
+                // Ya hay idioma guardado → ir directo a la pantalla principal
+                startActivity(Intent(this, MainActivity::class.java))
+            }
+
+            finish() // cerrar esta actividad
         }, 3000)
     }
 }
