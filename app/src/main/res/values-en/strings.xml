@@ -3,6 +3,9 @@
     <string name="app_name">witzi</string>
     <string name="uno_text">Write here...</string>
 
+    <string name="navigation_drawer_open">Open menu navigation</string>
+    <string name="navigation_drawer_close">Close menu navigation</string>
+
     <string name="dos_saludo">greetings</string>
     <string name="dos_numeros">numbers</string>
     <string name="dos_alfabeto">alphabet</string>

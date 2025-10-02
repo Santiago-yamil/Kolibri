@@ -214,7 +214,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-
     private fun mostrarTraduccion(texto: String) {
         textViewTraduccion.text = texto
     }

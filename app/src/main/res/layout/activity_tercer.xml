@@ -13,29 +13,30 @@
     >
 
     <LinearLayout
+        android:id="@+id/headerLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="right"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
         android:background="@color/orange"
-        >
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:gravity="center_vertical">
 
+        <!-- Espaciador -->
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0" />
 
         <ImageButton
-
-            android:layout_marginTop="40dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="8dp"
             android:id="@+id/iconoSuperiorDerecha"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_gravity="top|end"
-            android:src="@drawable/home"
+            android:src="@drawable/book"
             android:contentDescription="Icono adicional"
-            android:padding="4dp"
-            android:background="@drawable/fondeo_redondeado_dos" />
-
+            android:padding="6dp"
+            android:background="@drawable/fondeo_redondeado_dos"/>
     </LinearLayout>
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
