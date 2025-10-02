@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<<<<<<< HEAD
-    <string name="app_name">witzi</string>
     <string name="uno_text">Escribe aquí...</string>
     <string name="hola">Hola</string>
 
