@@ -44,7 +44,8 @@
             android:id="@+id/spinnerIdiomaOrigen"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginBottom="12dp"/>
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/spiner_redondeado"/>
 
         <!-- Botón grabar redondo con solo icono -->
         <Button
@@ -70,7 +71,8 @@
             android:id="@+id/spinnerIdiomaDestino"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginBottom="12dp"/>
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/spiner_redondeado"/>
 
         <!-- TextView traducción -->
         <TextView

@@ -9,6 +9,7 @@ import android.widget.AdapterView.OnItemSelectedListener
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
+import androidx.core.content.ContextCompat
 import androidx.room.Room
 import com.yamil.kolibriidioma.R
 import kotlinx.coroutines.CoroutineScope
@@ -42,6 +43,8 @@ class MainActivity : ComponentActivity() {
         val spinnerIdiomaOrigen = findViewById<Spinner>(R.id.spinnerIdiomaOrigen)
         val spinnerIdiomaDestino = findViewById<Spinner>(R.id.spinnerIdiomaDestino)
 
+
+
         // Configurar spinners de idiomas
         val idiomas = listOf("Español", "Nahuatl", "Inglés")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, idiomas)
@@ -50,16 +53,22 @@ class MainActivity : ComponentActivity() {
         spinnerIdiomaOrigen.adapter = adapter
         spinnerIdiomaDestino.adapter = adapter
 
-        spinnerIdiomaOrigen.onItemSelectedListener = object : OnItemSelectedListener {
+
+        spinnerIdiomaOrigen.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 idiomaOrigenSeleccionado = parent.getItemAtPosition(position).toString()
+                (view as? TextView)?.setTextColor(ContextCompat.getColor(this@MainActivity, android.R.color.black))
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
         }
 
+
+
+
         spinnerIdiomaDestino.onItemSelectedListener = object : OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 idiomaDestinoSeleccionado = parent.getItemAtPosition(position).toString()
+                (view as? TextView)?.setTextColor(ContextCompat.getColor(this@MainActivity, android.R.color.black))
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
         }
