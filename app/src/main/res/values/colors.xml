@@ -16,4 +16,16 @@
     <color name="morado">#9462F2</color>
 
 
+<!--    paleta de colores-->
+
+    <color name="vibrante">#F58735</color>
+    <color name="pastel">#A6D99D</color>
+    <color name="azul.verde">#008080</color>
+    <color name="dorado">#FDD000</color>
+    <color name="intenso">#E5367F</color>
+    <color name="toque">#E25858</color>
+
+
+
+
 </resources>

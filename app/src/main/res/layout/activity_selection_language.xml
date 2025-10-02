@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/containerOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/vibrante"
+        android:layout_margin="16dp"
+        android:gravity="center_horizontal"
+        android:elevation="4dp">
+
+    <!-- Titulo -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecciona tu idioma:"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white"/>
+
+        <!-- opciones -->
+        <RadioGroup
+            android:id="@+id/radioGroupOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/opcionNahuatl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nahuatl"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:buttonTint="@color/white"
+                />
+
+            <RadioButton
+                android:id="@+id/opcionEspanol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Español"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:buttonTint="@color/white"/>
+
+            <RadioButton
+                android:id="@+id/opcionIngles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingles"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:buttonTint="@color/white"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+</LinearLayout>
