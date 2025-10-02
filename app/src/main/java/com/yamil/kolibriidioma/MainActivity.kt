@@ -42,8 +42,15 @@ class MainActivity : ComponentActivity() {
         val botonHablar = findViewById<Button>(R.id.botonGrabar)
         val spinnerIdiomaOrigen = findViewById<Spinner>(R.id.spinnerIdiomaOrigen)
         val spinnerIdiomaDestino = findViewById<Spinner>(R.id.spinnerIdiomaDestino)
+        val input = findViewById<EditText>(R.id.input)
+        val boton = findViewById<Button>(R.id.boton)
 
 
+        //traducir con el boton
+        boton.setOnClickListener {
+            val textoIngresado = input.text.toString()
+            buscarTraduccion(textoIngresado)
+        }
 
         // Configurar spinners de idiomas
         val idiomas = listOf("Español", "Nahuatl", "Inglés")

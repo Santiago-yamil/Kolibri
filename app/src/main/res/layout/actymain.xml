@@ -46,6 +46,19 @@
             android:layout_height="48dp"
             android:layout_marginBottom="12dp"
             android:background="@drawable/spiner_redondeado"/>
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/borde_edittext"
+            android:hint="✏️ "
+            android:textColor="@android:color/black"/>
+
+        <Button
+            android:id="@+id/boton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Traducir" />
 
         <!-- Botón grabar redondo con solo icono -->
         <Button
