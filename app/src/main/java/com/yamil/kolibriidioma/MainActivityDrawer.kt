@@ -19,7 +19,6 @@ import androidx.core.view.WindowCompat
 
 class MainActivityDrawer : DrawerBaseActivity() {
 
-
     companion object{
         val productos: MutableList<Producto> = mutableListOf(
             Producto(
@@ -55,8 +54,6 @@ class MainActivityDrawer : DrawerBaseActivity() {
             )
         )
     }
-
-
     private lateinit var fraseDao: FraseDao
     private val SPEECH_REQUEST_CODE = 100
     private lateinit var textViewTraduccion: TextView

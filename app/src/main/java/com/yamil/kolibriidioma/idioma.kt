@@ -9,7 +9,6 @@ import androidx.activity.ComponentActivity
 import android.content.Context
 import java.util.Locale
 
-
 class Idioma : ComponentActivity() {
 
     private var idiomaSeleccionado: String = "es" // por defecto español
