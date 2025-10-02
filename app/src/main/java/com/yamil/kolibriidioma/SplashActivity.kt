@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 class SplashActivity : AppCompatActivity() {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
@@ -51,10 +52,14 @@ class SplashActivity : AppCompatActivity() {
                 startActivity(Intent(this, SelectionLanguageActivity::class.java))
             } else {
                 // Ya hay idioma guardado → ir directo a la pantalla principal
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, DetailProductActivity::class.java))
             }
 
             finish() // cerrar esta actividad
         }, 3000)
     }
+
+
+
+
 }

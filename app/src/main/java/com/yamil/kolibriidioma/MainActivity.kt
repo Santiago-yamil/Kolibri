@@ -19,6 +19,7 @@ import java.text.Normalizer
 
 class MainActivity : BaseActivity() {
 
+
     companion object{
         val productos: MutableList<Producto> = mutableListOf(
             Producto(
@@ -54,7 +55,6 @@ class MainActivity : BaseActivity() {
             )
         )
     }
-
 
 
     private lateinit var fraseDao: FraseDao

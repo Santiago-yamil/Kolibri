@@ -26,10 +26,6 @@ import java.text.Normalizer
 
 class MainActivity2 : BaseActivity() {
 
-
-
-
-
     private lateinit var fraseDao: FraseDao
     private val SPEECH_REQUEST_CODE = 100
     private lateinit var textViewTraduccion: TextView
