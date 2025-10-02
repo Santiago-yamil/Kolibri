@@ -19,12 +19,19 @@
     <color name="pastel">#A6D99D</color>
     <color name="azul.verde">#008080</color>
     <color name="dorado">#FDD000</color>
-    <color name="intenso">#E5367F</color>
+    <color name="intenso">#FF559C</color>
     <color name="toque">#E25858</color>
 
+    <!-- LAST COLORS -->
+    <color name="naranjaBrillante">#F5B041</color>
+    <color name="Turquesa">#008080</color>
+    <color name="VerdeMenta">#98FB98</color>
 
-
-
+    <color name="Lima">#90EE90</color>
+    <color name="RosaMexicano">#FF1493</color>
+    <color name="AmarilloBrillante">#FFD700</color>
+    <color name="durazno">#FFC0CB</color>
+    <color name="bosque">#228B22</color>
 
 
 </resources>

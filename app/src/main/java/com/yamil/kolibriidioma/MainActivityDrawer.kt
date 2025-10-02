@@ -74,7 +74,7 @@ class MainActivityDrawer : DrawerBaseActivity() {
                 )
 
         // 🔶 Conectar el botón del header naranja al Drawer
-        val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
+        drawerLayout
         val btnMenu = findViewById<ImageButton>(R.id.iconoSuperiorDerecha)
 
         btnMenu.setOnClickListener {

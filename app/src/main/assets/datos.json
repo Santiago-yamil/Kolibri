@@ -41,6 +41,48 @@
       "traduccion": "Mostla",
       "descripcion": "Decir 'Mostla' implicaba la esperanza de la continuidad y la conexión entre los ciclos de la vida.",
       "audio": "hastamanana"
+    },
+    {
+      "es": "Hola",
+      "imagen": "hola",
+      "traduccion": "Niltze",
+      "descripcion": "Un saludo breve y amistoso, usado al encontrarse con alguien en cualquier momento del día.",
+      "audio": "hola"
+    },
+    {
+      "es": "Adiós",
+      "imagen": "adios",
+      "traduccion": "Cualli tonalli",
+      "descripcion": "Una despedida que deseaba un buen destino y buena jornada a la persona que se iba.",
+      "audio": "adios"
+    },
+    {
+      "es": "Bienvenido",
+      "imagen": "bienvenido",
+      "traduccion": "Ximopanōltih",
+      "descripcion": "Expresión de hospitalidad y apertura hacia quien llegaba a casa o al pueblo.",
+      "audio": "bienvenido"
+    },
+    {
+      "es": "Con permiso",
+      "imagen": "conpermiso",
+      "traduccion": "Xikpatla",
+      "descripcion": "Se usaba como muestra de respeto al pasar frente a alguien o interrumpir.",
+      "audio": "conpermiso"
+    },
+    {
+      "es": "Gracias",
+      "imagen": "gracias",
+      "traduccion": "Tlazohcamati",
+      "descripcion": "Agradecimiento profundo, que reconocía el valor de la acción recibida y expresaba gratitud sincera.",
+      "audio": "gracias"
+    },
+    {
+      "es": "Perdón",
+      "imagen": "perdon",
+      "traduccion": "Nimitztlapaloa",
+      "descripcion": "Petición de disculpa que mostraba humildad y voluntad de armonía social.",
+      "audio": "perdon"
     }
   ],
   "animales": [
@@ -253,22 +295,42 @@
       "imagen": "negro",
       "traduccion": "Tliliwik / Tliltik",
       "descripcion": "El negro simboliza la tierra fértil y la oscuridad del inframundo, lugar de descanso de los ancestros según la cosmovisión náhuatl.",
-      "audio": "audio_costumbres_1.mp3"
+      "audio": "audio_negro"
     },
     {
       "es": "Rojo",
       "imagen": "rojo",
       "traduccion": "Chichiltik",
       "descripcion": "El rojo representa la sangre, la vida y la fuerza; era usado en rituales y vestimentas de guerreros y sacerdotes.",
-      "audio": "audio_costumbres_2.mp3"
+      "audio": "audio_rojo"
     },
     {
       "es": "Amarillo",
       "imagen": "amarillo",
       "traduccion": "Kostik",
       "descripcion": "El amarillo está asociado al maíz maduro y al sol, elementos centrales en la alimentación y espiritualidad náhuatl.",
-      "audio": "audio_costumbres_3.mp3"
+      "audio": "audio_amarillo"
+    },
+    {
+      "es": "Azul",
+      "imagen": "azul",
+      "traduccion": "Ilwikatik",
+      "descripcion": "El azul representa la divinidad, fertilidad y renacimiento.",
+      "audio": "audio_azul"
+    },
+    {
+      "es": "Verde",
+      "imagen": "verde",
+      "traduccion": "Xoxowik",
+      "descripcion": "El verde simbolixza la naturaleza, la vida y lo valioso como la esmeralda o el jade.",
+      "audio": "audio_verde"
+    },
+    {
+      "es": "Morado",
+      "imagen": "morado",
+      "traduccion": "Kamohtik",
+      "descripcion": "El morado se asocia con la planta matlalli o el camote morado",
+      "audio": "audio_morado"
     }
   ]
-
 }

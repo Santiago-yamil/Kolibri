@@ -36,6 +36,10 @@
             android:name=".SegundoActivityDrawer"
             android:exported="true"
             android:launchMode="singleTop"/>
+        <activity
+            android:name=".acercaNosotros"
+            android:exported="true"
+            android:launchMode="singleTop"/>
 
 
         <activity

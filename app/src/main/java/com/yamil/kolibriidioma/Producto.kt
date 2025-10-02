@@ -1,6 +1,5 @@
 package com.yamil.kolibriidioma
 
-
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 

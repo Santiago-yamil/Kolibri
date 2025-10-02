@@ -10,8 +10,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 
-
-
 class CuadradoAdapter(private val lista: List<ItemCuadrado>) :
     RecyclerView.Adapter<CuadradoAdapter.CuadradoViewHolder>() {
 

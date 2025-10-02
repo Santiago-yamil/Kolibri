@@ -68,7 +68,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/rounded_button_azul"
+            android:background="@drawable/rounded_button_2"
             android:padding="20dp"
             android:text="Saludos"
             android:backgroundTint="@null"
@@ -80,7 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/rounded_button_verde"
+            android:background="@drawable/rounded_button_3"
             android:padding="20dp"
             android:text="Numeros"
             android:backgroundTint="@null"
@@ -93,7 +93,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/rounded_button_morado"
+            android:background="@drawable/rounded_button_1"
             android:padding="20dp"
             android:text="Alfabeto"
             app:backgroundTint="@null"/>
@@ -105,7 +105,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/rounded_button_naranja"
+            android:background="@drawable/rounded_button_5"
             android:padding="20dp"
             android:text="Familia"
             app:backgroundTint="@null"/>
@@ -117,7 +117,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/rounded_button_rojo"
+            android:background="@drawable/rounded_button_7"
             android:padding="20dp"
             android:text="Comercio"
             app:backgroundTint="@null"/>
@@ -129,7 +129,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/rounded_button_verde"
+            android:background="@drawable/rounded_button_6"
             android:padding="20dp"
             android:text="Animales"
             app:backgroundTint="@null"/>
@@ -140,7 +140,7 @@
             android:backgroundTint="@null"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_button_morado"
+            android:background="@drawable/rounded_button_8"
             android:padding="20dp"
             android:text="Colores"
             app:backgroundTint="@null"/>

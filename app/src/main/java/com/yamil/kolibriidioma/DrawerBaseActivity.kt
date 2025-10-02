@@ -40,7 +40,7 @@ abstract class DrawerBaseActivity : AppCompatActivity(),
             R.id.nav_pagPrin -> MainActivityDrawer::class.java
             R.id.nav_dicc    -> SegundoActivityDrawer::class.java
             R.id.nav_tianguis-> com.yamil.kolibriidioma.recursos_cuatro.ComprasActivityDrawer::class.java
-            R.id.nav_about   -> null // abre diálogo o lo que quieras
+            R.id.nav_about   -> acercaNosotros::class.java
             else             -> null
         } ?: return true
 
