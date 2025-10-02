@@ -31,8 +31,15 @@
             android:name=".TercerActivity"
             android:exported="true" />
         <activity
+            android:name=".recursos_cuatro.ComprasActivity"
+            android:exported="false" />
+
+
+        <activity
             android:name=".MainActivity"
             android:exported="true"></activity>
     </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
 
 </manifest>
