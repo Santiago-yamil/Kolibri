@@ -40,7 +40,7 @@ class ComprasActivityDrawer : DrawerBaseActivity() {
         val productos: MutableList<Producto> = mutableListOf(
             Producto(
                 imagenes = mutableListOf("https://www.cmabastos.es/images/blog/Cuitlacoche.jpg", "https://www.mercadoflotante.com/blog/wp-content/uploads/2021/09/Cuitlacoche.jpeg"),
-                nombre = "Cuitlacoche",
+                nombre = "Huitlacoche",
                 precio = 85.0,
                 descripcion = "Hongo de maíz comestible, considerado un manjar ancestral.",
 

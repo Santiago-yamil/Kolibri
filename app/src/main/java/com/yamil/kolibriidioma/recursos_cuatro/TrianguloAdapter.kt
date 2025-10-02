@@ -19,6 +19,7 @@ class ProductoAdapter(private val lista: List<Producto>) :
         val nombre: TextView = itemView.findViewById(R.id.textView)
         val imagen: ImageView = itemView.findViewById(R.id.imageView)
 
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -30,7 +31,9 @@ class ProductoAdapter(private val lista: List<Producto>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val producto = lista[position]
-        holder.nombre.text = producto.nombre
+
+        val concat = "$${producto.precio} - ${producto.nombre}"
+        holder.nombre.text = concat
 
 
         val url = producto.imagenes.firstOrNull()

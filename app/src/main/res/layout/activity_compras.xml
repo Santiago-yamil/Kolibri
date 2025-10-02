@@ -9,7 +9,7 @@
     android:orientation="vertical"
 
     android:gravity="center"
-    android:background="@color/gray"
+    android:background="@color/white"
     >
 
     <LinearLayout
@@ -40,6 +40,16 @@
             android:padding="6dp"
             android:background="@drawable/fondeo_redondeado_dos"
             />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recomendaciones Del Dia"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:paddingHorizontal="20dp"
+            />
+
     </LinearLayout>
     <View
         android:layout_width="match_parent"
