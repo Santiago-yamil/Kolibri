@@ -1,5 +1,6 @@
 package com.yamil.kolibriidioma.recursos_cuatro
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import com.yamil.kolibriidioma.DetailProductActivity
 import com.yamil.kolibriidioma.Producto
 import com.yamil.kolibriidioma.R
 
@@ -35,6 +37,14 @@ class ProductoAdapter(private val lista: List<Producto>) :
         holder.imagen.load(url) {
             placeholder(R.drawable.book)  // usa un drawable que SÍ exista
             error(R.drawable.micro)       // idem
+        }
+
+        // CLICK: abre detalle
+        holder.itemView.setOnClickListener {
+            val ctx = it.context
+            val intent = Intent(ctx, DetailProductActivity::class.java)
+            intent.putExtra("producto", producto)
+            ctx.startActivity(intent)
         }
     }
 

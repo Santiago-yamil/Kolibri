@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.speech.RecognizerIntent
 import android.view.View
 import android.widget.*
-import android.widget.AdapterView.OnItemSelectedListener
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
@@ -16,8 +15,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.text.Normalizer
+import androidx.core.view.WindowCompat
 
-class MainActivity : BaseActivity() {
+class MainActivityDrawer : DrawerBaseActivity() {
 
 
     companion object{
@@ -69,6 +69,13 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.actymain)
 
+        WindowCompat.setDecorFitsSystemWindows(window, true)
+        window.decorView.systemUiVisibility = (
+                View.SYSTEM_UI_FLAG_FULLSCREEN or
+                        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                )
+
         // 🔶 Conectar el botón del header naranja al Drawer
         val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
         val btnMenu = findViewById<ImageButton>(R.id.iconoSuperiorDerecha)
@@ -107,11 +114,11 @@ class MainActivity : BaseActivity() {
         spinnerIdiomaOrigen.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 idiomaOrigenSeleccionado = parent.getItemAtPosition(position).toString()
-                (view as? TextView)?.setTextColor(ContextCompat.getColor(this@MainActivity, android.R.color.black))
+                (view as? TextView)?.setTextColor(ContextCompat.getColor(this@MainActivityDrawer, android.R.color.black))
 
                 // filtrar lista para destino
                 val listaFiltrada = idiomas.filter { it != idiomaOrigenSeleccionado }
-                adapterDestino = ArrayAdapter(this@MainActivity, android.R.layout.simple_spinner_item, listaFiltrada)
+                adapterDestino = ArrayAdapter(this@MainActivityDrawer, android.R.layout.simple_spinner_item, listaFiltrada)
                 adapterDestino.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
                 spinnerIdiomaDestino.adapter = adapterDestino
             }
@@ -122,7 +129,7 @@ class MainActivity : BaseActivity() {
         spinnerIdiomaDestino.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 idiomaDestinoSeleccionado = parent.getItemAtPosition(position).toString()
-                (view as? TextView)?.setTextColor(ContextCompat.getColor(this@MainActivity, android.R.color.black))
+                (view as? TextView)?.setTextColor(ContextCompat.getColor(this@MainActivityDrawer, android.R.color.black))
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -148,6 +155,7 @@ class MainActivity : BaseActivity() {
             iniciarReconocimientoVoz()
         }
     }
+    override fun currentDestId(): Int = R.id.nav_pagPrin
 
     fun String.normalizarTexto(): String {
         val temp = Normalizer.normalize(this, Normalizer.Form.NFD)

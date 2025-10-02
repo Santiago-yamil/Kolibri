@@ -9,14 +9,9 @@ import android.widget.AdapterView.OnItemSelectedListener
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.room.Room
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -24,7 +19,8 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.text.Normalizer
 
-class MainActivity2 : BaseActivity() {
+class MainActivity2Drawer : DrawerBaseActivity() {
+    override fun currentDestId(): Int = R.id.nav_pagPrin
 
     private lateinit var fraseDao: FraseDao
     private val SPEECH_REQUEST_CODE = 100
@@ -38,11 +34,17 @@ class MainActivity2 : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.actymain)
 
+        window.decorView.systemUiVisibility = (
+                View.SYSTEM_UI_FLAG_FULLSCREEN or
+                        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                )
+
         // 🔶 Conectar el botón del header naranja al Drawer
 
         val iconoSuperiorDerecha = findViewById<ImageButton>(R.id.iconoSuperiorDerecha)
         iconoSuperiorDerecha.setOnClickListener {
-            val intent = Intent(this, SegundoActivity::class.java)
+            val intent = Intent(this, SegundoActivityDrawer::class.java)
             startActivity(intent)
         }
 

@@ -7,7 +7,7 @@
     <corners android:radius="16dp" />  <!-- Radio de borde redondeado -->
 
     <stroke
-        android:width="4dp"
-        android:color="@color/green_ligth" />     <!-- Borde (opcional) -->
+        android:width="1px"
+        android:color="@color/black" />     <!-- Borde (opcional) -->
 
 </shape>
