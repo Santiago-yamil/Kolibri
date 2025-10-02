@@ -45,6 +45,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.play.services.drive)
     kapt("androidx.room:room-compiler:2.7.1")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1")

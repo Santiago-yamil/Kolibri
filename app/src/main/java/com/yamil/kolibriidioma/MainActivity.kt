@@ -119,8 +119,8 @@ class MainActivity : ComponentActivity() {
     private fun cargarFrasesIniciales(fraseDao: FraseDao) {
         val frases = listOf(
             Frase(espanol = "Buenos días", nahuatl = "Yatlahkah", ingles = "Good morning"),
-            Frase(espanol = "Buenos tardes", nahuatl = "Yateotlak", ingles = "Good afternoon"),
-            Frase(espanol = "Buenos noches", nahuatl = "Kuali youaltin", ingles = "Good night"),
+            Frase(espanol = "Buenas tardes", nahuatl = "Yateotlak", ingles = "Good afternoon"),
+            Frase(espanol = "Buenas noches", nahuatl = "Kuali youaltin", ingles = "Good night"),
             Frase(espanol = "Cómo estás", nahuatl = "Tlen tichika?", ingles = "How are you?"),
             Frase(espanol = "Gracias", nahuatl = "Tlazohcamati", ingles = "Thank you"),
             Frase(espanol = "Por favor", nahuatl = "Nimitstlatlaz", ingles = "Please"),
