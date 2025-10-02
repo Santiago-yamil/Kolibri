@@ -52,7 +52,7 @@ class SplashActivity : AppCompatActivity() {
                 startActivity(Intent(this, SelectionLanguageActivity::class.java))
             } else {
                 // Ya hay idioma guardado → ir directo a la pantalla principal
-                startActivity(Intent(this, DetailProductActivity::class.java))
+                startActivity(Intent(this, MainActivity::class.java))
             }
 
             finish() // cerrar esta actividad
