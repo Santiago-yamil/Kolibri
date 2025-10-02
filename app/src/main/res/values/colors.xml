@@ -21,6 +21,10 @@
     <color name="dorado">#FDD000</color>
     <color name="intenso">#FF559C</color>
     <color name="toque">#E25858</color>
+    <color name="verde_claro">#4CAF50</color>
+    <color name="vibrante_claro">#F6A1A1</color>
+    <color name="rojo_oscuro">#640101</color>
+
 
     <!-- LAST COLORS -->
     <color name="naranjaBrillante">#F5B041</color>
