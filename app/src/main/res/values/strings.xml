@@ -1,5 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">KolibriIdioma</string>
+    <string name="app_name">witzi</string>
+    <string name="uno_text">Escribe aquí...</string>
+    <string name="hola">Hola</string>
+
     <string name="navigation_drawer_open">Abrir menú de navegación</string>
     <string name="navigation_drawer_close">Cerrar menú de navegación</string>
+
+    <string name="dos_saludo">saludos</string>
+    <string name="dos_numeros">numeros</string>
+    <string name="dos_alfabeto">alfabeto</string>
+    <string name="dos_familia">familia</string>
+    <string name="dos_comercio">comercio</string>
+    <string name="dos_animales">animales</string>
+    <string name="dos_colores">colores</string>
 </resources>
+
+
+

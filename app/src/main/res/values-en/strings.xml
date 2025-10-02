@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">witzi</string>
+    <string name="uno_text">Write here...</string>
+
+    <string name="hola">hello</string>
+    <string name="navigation_drawer_open">Open menu navigation</string>
+    <string name="navigation_drawer_close">Close menu navigation</string>
+
+    <string name="dos_saludo">greetings</string>
+    <string name="dos_numeros">numbers</string>
+    <string name="dos_alfabeto">alphabet</string>
+    <string name="dos_familia">family</string>
+    <string name="dos_comercio">trade</string>
+    <string name="dos_animales">animals</string>
+    <string name="dos_colores">colors</string>
+</resources>

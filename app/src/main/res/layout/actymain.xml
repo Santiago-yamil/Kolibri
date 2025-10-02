@@ -42,6 +42,7 @@
         android:layout_weight="1"
         android:orientation="vertical"
         android:padding="16dp"
+        android:background="@color/gray"
         android:gravity="center_horizontal">
 
         <!-- Spinner idioma origen -->
@@ -49,7 +50,23 @@
             android:id="@+id/spinnerIdiomaOrigen"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginBottom="12dp"/>
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/spiner_redondeado"/>
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/borde_edittext"
+            android:hint="✏️ "
+            android:textColor="@android:color/black"/>
+
+        <Button
+            android:id="@+id/boton"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Traducir"
+            android:background="@color/green"/>
 
         <!-- Botón grabar redondo con solo icono -->
         <Button
@@ -75,7 +92,8 @@
             android:id="@+id/spinnerIdiomaDestino"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginBottom="12dp"/>
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/spiner_redondeado"/>
 
         <!-- TextView traducción -->
         <TextView

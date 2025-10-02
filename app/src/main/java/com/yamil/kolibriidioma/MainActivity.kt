@@ -9,6 +9,7 @@ import android.widget.AdapterView.OnItemSelectedListener
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
+import androidx.core.content.ContextCompat
 import androidx.room.Room
 import com.yamil.kolibriidioma.R
 import kotlinx.coroutines.CoroutineScope
@@ -41,28 +42,53 @@ class MainActivity : ComponentActivity() {
         val botonHablar = findViewById<Button>(R.id.botonGrabar)
         val spinnerIdiomaOrigen = findViewById<Spinner>(R.id.spinnerIdiomaOrigen)
         val spinnerIdiomaDestino = findViewById<Spinner>(R.id.spinnerIdiomaDestino)
+        val input = findViewById<EditText>(R.id.input)
+        val boton = findViewById<Button>(R.id.boton)
 
-        // Configurar spinners de idiomas
+
+        //traducir con el boton
+        boton.setOnClickListener {
+            val textoIngresado = input.text.toString().trim()
+            buscarTraduccion(textoIngresado)
+        }
+
         val idiomas = listOf("Español", "Nahuatl", "Inglés")
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, idiomas)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
-        spinnerIdiomaOrigen.adapter = adapter
-        spinnerIdiomaDestino.adapter = adapter
+// Adapter para origen (con todos)
+        val adapterOrigen = ArrayAdapter(this, android.R.layout.simple_spinner_item, idiomas)
+        adapterOrigen.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinnerIdiomaOrigen.adapter = adapterOrigen
 
-        spinnerIdiomaOrigen.onItemSelectedListener = object : OnItemSelectedListener {
+// Adapter para destino (empieza igual que origen)
+        var adapterDestino = ArrayAdapter(this, android.R.layout.simple_spinner_item, idiomas)
+        adapterDestino.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinnerIdiomaDestino.adapter = adapterDestino
+
+// Listener del spinner origen
+        spinnerIdiomaOrigen.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 idiomaOrigenSeleccionado = parent.getItemAtPosition(position).toString()
+                (view as? TextView)?.setTextColor(ContextCompat.getColor(this@MainActivity, android.R.color.black))
+
+                // filtrar lista para destino
+                val listaFiltrada = idiomas.filter { it != idiomaOrigenSeleccionado }
+                adapterDestino = ArrayAdapter(this@MainActivity, android.R.layout.simple_spinner_item, listaFiltrada)
+                adapterDestino.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+                spinnerIdiomaDestino.adapter = adapterDestino
             }
+
             override fun onNothingSelected(parent: AdapterView<*>) {}
         }
 
-        spinnerIdiomaDestino.onItemSelectedListener = object : OnItemSelectedListener {
+        spinnerIdiomaDestino.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 idiomaDestinoSeleccionado = parent.getItemAtPosition(position).toString()
+                (view as? TextView)?.setTextColor(ContextCompat.getColor(this@MainActivity, android.R.color.black))
             }
+
             override fun onNothingSelected(parent: AdapterView<*>) {}
         }
+
 
         // Inicializar base de datos y DAO
         val db = Room.databaseBuilder(
@@ -93,8 +119,8 @@ class MainActivity : ComponentActivity() {
     private fun cargarFrasesIniciales(fraseDao: FraseDao) {
         val frases = listOf(
             Frase(espanol = "Buenos días", nahuatl = "Yatlahkah", ingles = "Good morning"),
-            Frase(espanol = "Buenos tardes", nahuatl = "Yateotlak", ingles = "Good afternoon"),
-            Frase(espanol = "Buenos noches", nahuatl = "Kuali youaltin", ingles = "Good night"),
+            Frase(espanol = "Buenas tardes", nahuatl = "Yateotlak", ingles = "Good afternoon"),
+            Frase(espanol = "Buenas noches", nahuatl = "Kuali youaltin", ingles = "Good night"),
             Frase(espanol = "Cómo estás", nahuatl = "Tlen tichika?", ingles = "How are you?"),
             Frase(espanol = "Gracias", nahuatl = "Tlazohcamati", ingles = "Thank you"),
             Frase(espanol = "Por favor", nahuatl = "Nimitstlatlaz", ingles = "Please"),
