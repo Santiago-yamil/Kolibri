@@ -47,7 +47,7 @@ class SplashActivity : AppCompatActivity() {
             val selectedOption = sharedPref.getString("selected_option", null)
 
             if (selectedOption == null) {
-                // Primera vez → mostrar pantalla de selección de idioma
+                // Primera vez → mostrar pantalla de selección de idioma jjjj
                 startActivity(Intent(this, SelectionLanguageActivity::class.java))
             } else {
                 // Ya hay idioma guardado → ir directo a la pantalla principal
