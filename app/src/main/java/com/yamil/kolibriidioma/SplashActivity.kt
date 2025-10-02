@@ -4,9 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
 
 class SplashActivity : AppCompatActivity() {
 
@@ -14,6 +16,13 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+
+        WindowCompat.setDecorFitsSystemWindows(window, true)
+        window.decorView.systemUiVisibility = (
+                View.SYSTEM_UI_FLAG_FULLSCREEN or
+                        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                )
 
         val logoPrincipal = findViewById<ImageView>(R.id.logoPrincipal)
         val logoSecundario = findViewById<ImageView>(R.id.logoSecundario)
@@ -52,7 +61,7 @@ class SplashActivity : AppCompatActivity() {
                 startActivity(Intent(this, SelectionLanguageActivity::class.java))
             } else {
                 // Ya hay idioma guardado → ir directo a la pantalla principal
-                startActivity(Intent(this, DetailProductActivity::class.java))
+                startActivity(Intent(this, MainActivityDrawer::class.java))
             }
 
             finish() // cerrar esta actividad

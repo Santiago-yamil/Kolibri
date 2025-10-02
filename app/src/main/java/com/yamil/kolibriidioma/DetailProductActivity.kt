@@ -1,33 +1,36 @@
 package com.yamil.kolibriidioma
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
 import coil.load
+import coil.transform.RoundedCornersTransformation
 
 class DetailProductActivity : AppCompatActivity() {
 
     private var currentIndex = 0  // índice de la imagen actual
+    private lateinit var producto: Producto
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_product)
 
-        // Producto simulado
-        val producto = Producto(
-            imagenes = mutableListOf(
-                "https://picsum.photos/600/400?random=1",
-                "https://picsum.photos/600/400?random=2",
-                "https://picsum.photos/600/400?random=3"
-            ),
-            nombre = "Cuitlacoche",
-            precio = 85.0,
-            descripcion = "Hongo de maíz comestible, considerado un manjar ancestral."
-        )
+        WindowCompat.setDecorFitsSystemWindows(window, true)
+        window.decorView.systemUiVisibility = (
+                View.SYSTEM_UI_FLAG_FULLSCREEN or
+                        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                )
 
-        // Referencias
+        // 1) Recibir el producto desde el Intent
+        producto = intent.getParcelableExtra("producto")
+            ?: error("No se recibió el producto en el Intent")
+
+        // 2) Referencias
         val imgProducto = findViewById<ImageView>(R.id.imgProducto)
         val btnPrev = findViewById<Button>(R.id.btnPrev)
         val btnNext = findViewById<Button>(R.id.btnNext)
@@ -35,32 +38,32 @@ class DetailProductActivity : AppCompatActivity() {
         val tvPrecio = findViewById<TextView>(R.id.tvPrecio)
         val tvDescripcion = findViewById<TextView>(R.id.tvDescripcion)
 
-        // Mostrar primera imagen
-        imgProducto.load(producto.imagenes[currentIndex]) { crossfade(true) }
-
-        // Mostrar datos del producto
+        // 3) Pinta datos
         tvNombre.text = producto.nombre
         tvPrecio.text = "$${producto.precio}"
         tvDescripcion.text = producto.descripcion
 
-        // Botón anterior
-        btnPrev.setOnClickListener {
-            if (currentIndex > 0) {
-                currentIndex--
-            } else {
-                currentIndex = producto.imagenes.size - 1 // volver al final
+        fun loadAt(index: Int) {
+            val url = producto.imagenes.getOrNull(index)
+            imgProducto.load(url) {
+                crossfade(true)
+                placeholder(R.drawable.book)
+                error(R.drawable.book)
+                transformations(RoundedCornersTransformation(8f))
             }
-            imgProducto.load(producto.imagenes[currentIndex]) { crossfade(true) }
         }
 
-        // Botón siguiente
+        loadAt(currentIndex)
+
+        // 4) Navegación entre imágenes
+        btnPrev.setOnClickListener {
+            currentIndex = if (currentIndex > 0) currentIndex - 1 else producto.imagenes.lastIndex
+            loadAt(currentIndex)
+        }
         btnNext.setOnClickListener {
-            if (currentIndex < producto.imagenes.size - 1) {
-                currentIndex++
-            } else {
-                currentIndex = 0 // volver al inicio
-            }
-            imgProducto.load(producto.imagenes[currentIndex]) { crossfade(true) }
+            currentIndex = if (currentIndex < producto.imagenes.lastIndex) currentIndex + 1 else 0
+            loadAt(currentIndex)
         }
     }
 }
+

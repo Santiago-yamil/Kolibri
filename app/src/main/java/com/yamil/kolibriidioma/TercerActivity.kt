@@ -2,8 +2,10 @@ package com.yamil.kolibriidioma
 
 import android.content.Context
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
@@ -14,6 +16,13 @@ class TercerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tercer)
+
+        WindowCompat.setDecorFitsSystemWindows(window, true)
+        window.decorView.systemUiVisibility = (
+                View.SYSTEM_UI_FLAG_FULLSCREEN or
+                        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                )
 
         val categoria = intent.getStringExtra("categoria")
         

@@ -2,15 +2,24 @@ package com.yamil.kolibriidioma
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.core.view.GravityCompat
+import androidx.core.view.WindowCompat
 
-class SegundoActivity : BaseActivity() {
+class SegundoActivityDrawer : DrawerBaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pantalla_menu)
+
+        WindowCompat.setDecorFitsSystemWindows(window, true)
+        window.decorView.systemUiVisibility = (
+                View.SYSTEM_UI_FLAG_FULLSCREEN or
+                        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                )
 
         // 🔶 Conectar el botón del header naranja al Drawer
         val btnMenu = findViewById<ImageButton>(R.id.iconoSuperiorDerecha)
@@ -35,6 +44,8 @@ class SegundoActivity : BaseActivity() {
         btnAnimales.setOnClickListener { newActivity("animales") }
         btnCostumbres.setOnClickListener { newActivity("colores") }
     }
+
+    override fun currentDestId(): Int = R.id.nav_dicc
 
     private fun newActivity(name: String) {
         val intent = Intent(this, TercerActivity::class.java)

@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     kotlin("kapt")//lo puedo borrar
+    id("kotlin-parcelize")
+
 }
 
 android {
@@ -66,4 +68,5 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("io.coil-kt:coil:2.6.0")
+
 }

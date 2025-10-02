@@ -9,9 +9,7 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 
-
-
-abstract class BaseActivity : AppCompatActivity(),
+abstract class DrawerBaseActivity : AppCompatActivity(),
     NavigationView.OnNavigationItemSelectedListener {
 
     protected lateinit var drawerLayout: DrawerLayout
@@ -64,7 +62,3 @@ abstract class BaseActivity : AppCompatActivity(),
         return true
     }
 }
-
-
-
-

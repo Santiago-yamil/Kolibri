@@ -1,22 +1,28 @@
 package com.yamil.kolibriidioma.recursos_cuatro
 
-import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageButton
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
+import androidx.core.view.WindowCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.yamil.kolibriidioma.BaseActivity
+import com.yamil.kolibriidioma.DrawerBaseActivity
 import com.yamil.kolibriidioma.Producto
 import com.yamil.kolibriidioma.R
-import com.yamil.kolibriidioma.SegundoActivity
 
-class ComprasActivity : BaseActivity() {
+class ComprasActivityDrawer : DrawerBaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_compras)
+
+        WindowCompat.setDecorFitsSystemWindows(window, true)
+        window.decorView.systemUiVisibility = (
+                View.SYSTEM_UI_FLAG_FULLSCREEN or
+                        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                )
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = GridLayoutManager(this, 2) // cuadrícula de 2 columnas
@@ -28,6 +34,7 @@ class ComprasActivity : BaseActivity() {
             drawerLayout.openDrawer(GravityCompat.START)
         }
     }
+    override fun currentDestId(): Int = R.id.nav_tianguis
 
     companion object{
         val productos: MutableList<Producto> = mutableListOf(

@@ -20,7 +20,10 @@
         android:background="@color/orange"
         android:paddingEnd="16dp"
         android:paddingStart="16dp"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <!-- Espaciador -->
         <View
@@ -30,13 +33,22 @@
 
         <ImageButton
             android:id="@+id/iconoSuperiorDerecha"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/book"
-            android:contentDescription="Icono adicional"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/menu_barra"
+            android:contentDescription="Icono menú"
             android:padding="6dp"
-            android:background="@drawable/fondeo_redondeado_dos"/>
+            android:background="@drawable/fondeo_redondeado_dos"
+            />
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
