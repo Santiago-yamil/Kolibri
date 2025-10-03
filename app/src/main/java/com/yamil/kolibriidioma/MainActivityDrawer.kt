@@ -162,11 +162,25 @@ class MainActivityDrawer : DrawerBaseActivity() {
     private fun cargarFrasesIniciales(fraseDao: FraseDao) {
         val frases = listOf(
             Frase(espanol = "Buenos días", nahuatl = "Yatlahkah", ingles = "Good morning"),
-            Frase(espanol = "Buenas tardes", nahuatl = "Yateotlak", ingles = "Good afternoon"),
-            Frase(espanol = "Buenas noches", nahuatl = "Kuali youaltin", ingles = "Good night"),
+            Frase(espanol = "Buenos tardes", nahuatl = "Yateotlak", ingles = "Good afternoon"),
+            Frase(espanol = "Buenos noches", nahuatl = "Kuali youaltin", ingles = "Good night"),
             Frase(espanol = "Cómo estás", nahuatl = "Tlen tichika?", ingles = "How are you?"),
             Frase(espanol = "Gracias", nahuatl = "Tlazohcamati", ingles = "Thank you"),
-            // ... resto de frases
+            Frase(espanol = "Por favor", nahuatl = "Nimitstlatlaz", ingles = "Please"),
+            Frase(espanol = "Hasta mañana", nahuatl = "Mostla", ingles = "See you tomorrow"),
+            Frase(espanol = "Adios", nahuatl = "Timoittazqueh", ingles = "Goodbye"),
+            Frase(espanol = "Mi nombre es", nahuatl = "Notoka"  , ingles = "My name is"),
+            Frase(espanol = "Perdón", nahuatl = "Nimitstlazotla", ingles = "Sorry"),
+            Frase(espanol = "Quiero hacer negocios contigo", nahuatl = "Nimitznequi ticatepan tlamachiliztli", ingles = "I want to do business with you"),
+            Frase(espanol = "Necesito hablar con el jefe", nahuatl = "Nimitznequi tlahtoa iuan tlatoani", ingles = "I need to speak with the boss"),
+            Frase(espanol = "Cuál es el precio", nahuatl = "Tlen yehuatl tlamaniliztli?", ingles = "What is the price?"),
+            Frase(espanol = "Estoy interesado en este producto", nahuatl = "Nimitznequi inin tlamantli", ingles = "I am interested in this product"),
+            Frase(espanol = "Necesitaba una compra", nahuatl = "Tlakoualistli nechpiyaya", ingles = "I needed to make a purchase"),
+            Frase(espanol = "Queremos colaborar juntos", nahuatl = "Ticchihua tlachihualiztli huehuepan", ingles = "We want to collaborate together"),
+            Frase(espanol = "Dónde firmamos", nahuatl = "Campa tiquintzani", ingles = "Where do we sign?"),
+            Frase(espanol = "Necesitamos una reunión", nahuatl = "Nimitznequi tlamachiliztli huan tlachinolli", ingles = "We need a meeting"),
+            Frase(espanol = "Sali a hacer una compra", nahuatl = "Ekauili niyawi tlakoualistli", ingles = "I went out to make a purchase"),
+            Frase(espanol = "El trabajador del mercado vende", nahuatl = "Tlasemananki tiankistli namaka", ingles = "The market worker sells")
         )
 
         CoroutineScope(Dispatchers.IO).launch {

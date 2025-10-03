@@ -17,6 +17,25 @@
     <string name="dos_comercio">comercio</string>
     <string name="dos_animales">animales</string>
     <string name="dos_colores">colores</string>
+
+
+    <string name="uno_traducir">TRADUCIR</string>
+    <string name="aparecera">Aqui aparecera la traduccion</string>
+
+    <string name="pagina_principal">Pagina Principal</string>
+    <string name="diccionarios">Diccionario</string>
+    <string name="idioma">Idioma</string>
+    <string name="tianguis">Tianguis Witzi</string>
+    <string name="acerca">Acerca de Nosotros</string>
+
+    <string name="tu_idioma">Selecciona tu idioma</string>
+    <string name="aceptar">Aceptar</string>
+
+    <string name="recomendaciones">Recomendaciones Del Dia</string>
+    <string name="el_idioma">Selecciona el idioma</string>
+
+
+
 </resources>
 
 

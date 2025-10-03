@@ -3,8 +3,11 @@ package com.yamil.kolibriidioma
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.Spinner
 import androidx.core.view.GravityCompat
 import androidx.core.view.WindowCompat
 
@@ -13,6 +16,8 @@ class SegundoActivityDrawer : DrawerBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pantalla_menu)
+
+
 
         WindowCompat.setDecorFitsSystemWindows(window, true)
         window.decorView.systemUiVisibility = (
@@ -35,6 +40,38 @@ class SegundoActivityDrawer : DrawerBaseActivity() {
         val btnComercio = findViewById<Button>(R.id.btnComercio)
         val btnAnimales = findViewById<Button>(R.id.btnAnimales)
         val btnCostumbres = findViewById<Button>(R.id.btnCostumbres)
+        val spinnerIdiomaOrigen = findViewById<Spinner>(R.id.spinnerIdiomaOrigen)
+
+// Opciones fijas
+        val opciones = listOf("Nahuatl")
+
+// Adaptador para el Spinner
+        val adapter = ArrayAdapter(
+            this,
+            R.layout.spinner_item, // diseño simple por defecto
+            opciones
+        )
+
+// Diseño de los items desplegados
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+// Asignar al Spinner
+        spinnerIdiomaOrigen.adapter = adapter
+
+// Listener (opcional, si solo quieres que muestre lo elegido, ni lo pongas)
+        spinnerIdiomaOrigen.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View,
+                position: Int,
+                id: Long
+            ) {
+                // Esto solo cambia lo que se ve, ya no haces nada más
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {}
+        }
+
 
         btnSaludos.setOnClickListener { newActivity("saludos") }
         btnNumeros.setOnClickListener { newActivity("numeros") }

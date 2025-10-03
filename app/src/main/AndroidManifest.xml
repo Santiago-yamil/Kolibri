@@ -18,6 +18,7 @@
             android:name=".DetailProductActivity"
             android:exported="false"
             />
+
         <activity
             android:name=".SelectionLanguageActivity"
             android:exported="false"
@@ -38,6 +39,10 @@
             android:launchMode="singleTop"/>
         <activity
             android:name=".acercaNosotros"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".Idioma"
             android:exported="true"
             android:launchMode="singleTop"/>
 

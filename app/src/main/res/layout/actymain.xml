@@ -101,7 +101,7 @@
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Traducir"
+                android:text="@string/uno_traducir"
                 android:backgroundTint="@color/vibrante"/>
 
             <Spinner
@@ -118,7 +118,7 @@
                 android:gravity="center"
                 android:maxHeight="150dp"
                 android:padding="16dp"
-                android:text="Aquí aparecerá la traducción"
+                android:text="@string/aparecera"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"

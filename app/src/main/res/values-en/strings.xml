@@ -14,4 +14,21 @@
     <string name="dos_comercio">trade</string>
     <string name="dos_animales">animals</string>
     <string name="dos_colores">colors</string>
+
+
+    <string name="uno_traducir">TRANSLATE</string>
+    <string name="aparecera">The translation will appear here</string>
+
+    <string name="pagina_principal">Main Page</string>
+    <string name="diccionarios">Diccionary</string>
+    <string name="idioma">Language</string>
+    <string name="tianguis">Market Witzi</string>
+    <string name="acerca">About Us</string>
+
+    <string name="tu_idioma">Select your Language</string>
+    <string name="aceptar">Accept</string>
+    <string name="recomendaciones">Recommendations of the day</string>
+
+    <string name="el_idioma">Select the lenguaje</string>
+
 </resources>

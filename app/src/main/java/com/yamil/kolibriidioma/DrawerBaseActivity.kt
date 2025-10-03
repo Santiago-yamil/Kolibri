@@ -1,5 +1,6 @@
 package com.yamil.kolibriidioma
 
+import android.content.Context
 import android.content.Intent
 import android.view.MenuItem
 import android.widget.FrameLayout
@@ -33,12 +34,14 @@ abstract class DrawerBaseActivity : AppCompatActivity(),
         navView.setCheckedItem(currentDestId())
     }
 
+
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         drawerLayout.closeDrawer(GravityCompat.START)
 
         val target = when (item.itemId) {
             R.id.nav_pagPrin -> MainActivityDrawer::class.java
             R.id.nav_dicc    -> SegundoActivityDrawer::class.java
+            R.id.nav_idioma  -> Idioma::class.java
             R.id.nav_tianguis-> com.yamil.kolibriidioma.recursos_cuatro.ComprasActivityDrawer::class.java
             R.id.nav_about   -> acercaNosotros::class.java
             else             -> null
@@ -61,4 +64,9 @@ abstract class DrawerBaseActivity : AppCompatActivity(),
 
         return true
     }
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(LocaleManager.wrap(newBase))
+    }
+
+
 }

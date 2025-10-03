@@ -2,18 +2,18 @@
 
     <item
         android:id="@+id/nav_pagPrin"
-        android:title="Pagina Principal" />
+        android:title="@string/pagina_principal" />
     <item
         android:id="@+id/nav_dicc"
-        android:title="Diccionario" />
+        android:title="@string/diccionarios" />
     <item
         android:id="@+id/nav_idioma"
-        android:title="Idioma" />
+        android:title="@string/idioma" />
     <item
         android:id="@+id/nav_tianguis"
-        android:title="Tianguis Witzi" />
+        android:title="@string/tianguis" />
     <item
         android:id="@+id/nav_about"
-        android:title="Acerca de nosotros" />
+        android:title="@string/acerca" />
 
 </menu>

@@ -9,62 +9,67 @@ import androidx.activity.ComponentActivity
 import android.content.Context
 import java.util.Locale
 
-class Idioma : ComponentActivity() {
+import android.content.Intent
 
-    private var idiomaSeleccionado: String = "es" // por defecto español
+
+class Idioma : BaseActivity() {
+
+    private var idiomaSeleccionado: String = "es" // default
+
+    override fun currentDestId(): Int = R.id.nav_idioma
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.idioma)
 
-        val paises = listOf(
-            "Español Latinoamerica",
-            "Inglish",
-            "Portugues",
-            "Popoluca",
-            "Huasteco",
-            "Yucateco",
-            "Peruano",
-            "Mixteco",
-            "Nahuatl"
+        // Mapa display ↔ code
+        val opciones = listOf(
+            "Español Latinoamérica" to "es",
+            "English" to "en",
+            "Português" to "pt",
+            "Nahuatl" to "nah"
         )
+        val displayToCode = opciones.toMap()
+        val codeToDisplay = opciones.associate { it.second to it.first }
 
         val autoPais = findViewById<AutoCompleteTextView>(R.id.autoPais)
         val btnAceptar = findViewById<Button>(R.id.btnAceptar)
 
-        // Adaptador del desplegable
-        val adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, paises)
+        // Set actual guardado
+        val langGuardado = LocaleManager.currentLanguage(this)
+        idiomaSeleccionado = langGuardado
+        autoPais.setText(codeToDisplay[langGuardado] ?: "Español Latinoamérica", false)
+
+        // Adapter
+        val adapter = ArrayAdapter(
+            this,
+            android.R.layout.simple_dropdown_item_1line,
+            opciones.map { it.first }
+        )
         autoPais.setAdapter(adapter)
 
-        // Cuando se selecciona un item del desplegable
+        // Selección
         autoPais.setOnItemClickListener { parent, _, position, _ ->
             val seleccionado = parent.getItemAtPosition(position).toString()
+            idiomaSeleccionado = displayToCode[seleccionado] ?: "es"
             Toast.makeText(this, "Elegiste: $seleccionado", Toast.LENGTH_SHORT).show()
-
-            // Mapear la opción a un código de idioma válido (ISO)
-            idiomaSeleccionado = when (seleccionado) {
-                "Español Latinoamerica" -> "es"
-                "Inglish" -> "en"
-                "Portugues" -> "pt"
-                "Nahuatl" -> "nah"
-                else -> "es" // fallback
-            }
         }
 
-        // Botón para aplicar el cambio
+        // Aplicar cambio
         btnAceptar.setOnClickListener {
-            val nuevoContexto = cambiarIdioma(this, idiomaSeleccionado)
-            recreate() // recarga la Activity con el nuevo idioma
+            LocaleManager.persistLanguage(applicationContext, idiomaSeleccionado)
+
+            // Trae el nuevo locale en BaseActivity.attachBaseContext
+            // y reinicia el flujo para refrescar todo el árbol de vistas
+            val intent = Intent(this, MainActivityDrawer::class.java).apply {
+                addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or
+                        Intent.FLAG_ACTIVITY_NEW_TASK or
+                        Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            }
+            startActivity(intent)
+            overridePendingTransition(0, 0)
+            finish()
         }
-    }
-
-    fun cambiarIdioma(context: Context, languageCode: String): Context {
-        val locale = Locale(languageCode)
-        Locale.setDefault(locale)
-
-        val config = context.resources.configuration
-        config.setLocale(locale)
-
-        return context.createConfigurationContext(config)
     }
 }
+

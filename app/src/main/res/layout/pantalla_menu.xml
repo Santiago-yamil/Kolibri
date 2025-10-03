@@ -6,7 +6,7 @@
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".SegundoActivityDrawer">
 
@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:orientation="horizontal"
-        android:background="@color/orange"
+        android:background="@color/vibrante"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:gravity="center_vertical"
@@ -49,8 +49,28 @@
         app:layout_constraintTop_toBottomOf="@id/headerLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/el_idioma"/>
+    <Spinner
+        android:id="@+id/spinnerIdiomaOrigen"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/spiner_redondeado"/>
 
 
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
     <!-- GridLayout con 1 columna y 7 botones -->
     <GridLayout
         android:id="@+id/gridLayout"
@@ -70,7 +90,7 @@
             android:layout_marginBottom="30dp"
             android:background="@drawable/rounded_button_2"
             android:padding="20dp"
-            android:text="Saludos"
+            android:text="@string/dos_saludo"
             android:backgroundTint="@null"
             app:backgroundTint="@null" />
 
@@ -82,7 +102,7 @@
             android:layout_marginBottom="30dp"
             android:background="@drawable/rounded_button_3"
             android:padding="20dp"
-            android:text="Numeros"
+            android:text="@string/dos_numeros"
             android:backgroundTint="@null"
             app:backgroundTint="@null" />
 
@@ -95,7 +115,7 @@
             android:layout_marginBottom="30dp"
             android:background="@drawable/rounded_button_1"
             android:padding="20dp"
-            android:text="Alfabeto"
+            android:text="@string/dos_alfabeto"
             app:backgroundTint="@null"/>
 
         <!-- Botón 4 -->
@@ -107,7 +127,7 @@
             android:layout_marginBottom="30dp"
             android:background="@drawable/rounded_button_5"
             android:padding="20dp"
-            android:text="Familia"
+            android:text="@string/dos_familia"
             app:backgroundTint="@null"/>
 
         <!-- Botón 5 -->
@@ -119,7 +139,7 @@
             android:layout_marginBottom="30dp"
             android:background="@drawable/rounded_button_7"
             android:padding="20dp"
-            android:text="Comercio"
+            android:text="@string/dos_comercio"
             app:backgroundTint="@null"/>
 
         <!-- Botón 6 -->
@@ -131,7 +151,7 @@
             android:layout_marginBottom="30dp"
             android:background="@drawable/rounded_button_6"
             android:padding="20dp"
-            android:text="Animales"
+            android:text="@string/dos_animales"
             app:backgroundTint="@null"/>
 
         <!-- Botón 7 -->
@@ -140,9 +160,12 @@
             android:backgroundTint="@null"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
             android:background="@drawable/rounded_button_8"
             android:padding="20dp"
-            android:text="Colores"
+            android:text="@string/dos_colores"
             app:backgroundTint="@null"/>
+
     </GridLayout>
+    </ScrollView>
 </LinearLayout>
